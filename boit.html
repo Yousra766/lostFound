@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="boit.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <!-- Header -->
+      <div class="sidebar-header">
+        <div class="header-left">
+          <h1 class="messages-title">Messages</h1>
+          <div class="badge">65</div>
+        </div>
+        <button class="compose-btn" aria-label="Compose message">
+          <i class="fas fa-pen"></i>
+        </button>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <i class="fas fa-magnifying-glass search-icon"></i>
+        <input type="text" class="search-input" placeholder="Search" aria-label="Search conversations">
+      </div>
+
+      <!-- Conversation List -->
+      <div class="contacts-list">
+        <div class="contact-item active" data-contact-id="1">
+          <div class="avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="contact-info">
+            <div class="contact-header">
+              <div class="contact-name">Senouci yousra</div>
+              <div class="contact-time">11:25</div>
+            </div>
+            <div class="contact-preview">Yes , it is mine ! :)</div>
+          </div>
+          <div class="unread-badge">5</div>
+        </div>
+
+        <div class="contact-item" data-contact-id="2">
+          <div class="avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="contact-info">
+            <div class="contact-header">
+              <div class="contact-name">Selka sara</div>
+              <div class="contact-time">12:20</div>
+            </div>
+            <div class="contact-preview">this web is so useful</div>
+          </div>
+          <div class="unread-badge">5</div>
+        </div>
+
+        <div class="contact-item" data-contact-id="3">
+          <div class="avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="contact-info">
+            <div class="contact-header">
+              <div class="contact-name">Touil yousra</div>
+              <div class="contact-time">13:00</div>
+            </div>
+            <div class="contact-preview">when i can meet you?</div>
+          </div>
+          <div class="unread-badge">5</div>
+        </div>
+
+        <div class="contact-item" data-contact-id="4">
+          <div class="avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="contact-info">
+            <div class="contact-header">
+              <div class="contact-name">Sahari fatima</div>
+              <div class="contact-time">13:05</div>
+            </div>
+            <div class="contact-preview">thank you so much !</div>
+          </div>
+          <div class="unread-badge">5</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT PANEL -->
+    <main class="chat-panel">
+      <!-- Top Bar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="topbar-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="contact-details">
+            <div class="contact-display-name">Hamdi ranim</div>
+            <div class="status-line">
+              <span class="status-dot"></span>
+              <span class="status-text">Online</span>
+              <span class="handle">@Hamdi_ranim</span>
+            </div>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button class="icon-btn more-btn" aria-label="More options">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </button>
+          <button class="icon-btn call-btn" aria-label="Call">
+            <i class="fas fa-phone"></i>
+          </button>
+          <button class="icon-btn video-btn" aria-label="Video call">
+            <i class="fas fa-video"></i>
+          </button>
+          <button class="view-profile-btn">View Profile</button>
+        </div>
+      </header>
+
+      <!-- Messages Area -->
+      <div class="messages-container">
+        <div class="messages-list" id="messagesList"></div>
+      </div>
+
+      <!-- Input Bar -->
+      <footer class="input-bar">
+        <button class="attachment-btn" aria-label="Attach file">
+          <i class="fas fa-paperclip"></i>
+        </button>
+        <hidden>
+          <input type="file" id="fileInput" aria-label="Choose file">
+        </hidden>
+
+        <button class="emoji-btn" aria-label="Emoji picker">
+          <i class="fas fa-face-smile"></i>
+        </button>
+
+        <div class="input-wrapper">
+          <input type="text" class="message-input" placeholder="Message" id="messageInput" aria-label="Type a message">
+          <i class="fas fa-image image-icon"></i>
+        </div>
+
+        <button class="send-btn" aria-label="Send message">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </footer>
+
+      <!-- Emoji Picker (hidden by default) -->
+      <div class="emoji-picker" id="emojiPicker">
+        <div class="emoji-grid">
+          <span class="emoji" data-emoji="😀">😀</span>
+          <span class="emoji" data-emoji="😁">😁</span>
+          <span class="emoji" data-emoji="😂">😂</span>
+          <span class="emoji" data-emoji="🤣">🤣</span>
+          <span class="emoji" data-emoji="😃">😃</span>
+          <span class="emoji" data-emoji="😄">😄</span>
+          <span class="emoji" data-emoji="😅">😅</span>
+          <span class="emoji" data-emoji="😆">😆</span>
+          <span class="emoji" data-emoji="😉">😉</span>
+          <span class="emoji" data-emoji="😊">😊</span>
+          <span class="emoji" data-emoji="😋">😋</span>
+          <span class="emoji" data-emoji="😎">😎</span>
+          <span class="emoji" data-emoji="😍">😍</span>
+          <span class="emoji" data-emoji="🥰">🥰</span>
+          <span class="emoji" data-emoji="😘">😘</span>
+          <span class="emoji" data-emoji="😗">😗</span>
+          <span class="emoji" data-emoji="😙">😙</span>
+          <span class="emoji" data-emoji="😚">😚</span>
+          <span class="emoji" data-emoji="🙂">🙂</span>
+          <span class="emoji" data-emoji="🤗">🤗</span>
+          <span class="emoji" data-emoji="🤩">🤩</span>
+          <span class="emoji" data-emoji="🤔">🤔</span>
+          <span class="emoji" data-emoji="🤨">🤨</span>
+          <span class="emoji" data-emoji="😐">😐</span>
+          <span class="emoji" data-emoji="😑">😑</span>
+          <span class="emoji" data-emoji="😶">😶</span>
+          <span class="emoji" data-emoji="🙄">🙄</span>
+          <span class="emoji" data-emoji="😏">😏</span>
+          <span class="emoji" data-emoji="😣">😣</span>
+          <span class="emoji" data-emoji="😥">😥</span>
+          <span class="emoji" data-emoji="😮">😮</span>
+          <span class="emoji" data-emoji="🤐">🤐</span>
+          <span class="emoji" data-emoji="😯">😯</span>
+          <span class="emoji" data-emoji="😪">😪</span>
+          <span class="emoji" data-emoji="😫">😫</span>
+          <span class="emoji" data-emoji="😴">😴</span>
+          <span class="emoji" data-emoji="😌">😌</span>
+          <span class="emoji" data-emoji="😛">😛</span>
+          <span class="emoji" data-emoji="😜">😜</span>
+          <span class="emoji" data-emoji="😝">😝</span>
+          <span class="emoji" data-emoji="🤤">🤤</span>
+          <span class="emoji" data-emoji="😒">😒</span>
+          <span class="emoji" data-emoji="😓">😓</span>
+          <span class="emoji" data-emoji="😔">😔</span>
+          <span class="emoji" data-emoji="😕">😕</span>
+          <span class="emoji" data-emoji="🙃">🙃</span>
+          <span class="emoji" data-emoji="🤑">🤑</span>
+          <span class="emoji" data-emoji="😲">😲</span>
+          <span class="emoji" data-emoji="☹️">☹️</span>
+          <span class="emoji" data-emoji="🙁">🙁</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Call Modal -->
+  <div class="modal" id="callModal">
+    <div class="modal-content">
+      <div class="modal-avatar">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="modal-name" id="callModalName">Hamdi ranim</div>
+      <div class="modal-status">
+        Calling<span class="animated-dots"><span>.</span><span>.</span><span>.</span></span>
+      </div>
+      <div class="modal-buttons">
+        <button class="modal-btn answer-btn">
+          <i class="fas fa-phone"></i>
+          Answer
+        </button>
+        <button class="modal-btn decline-btn">
+          <i class="fas fa-phone-slash"></i>
+          Decline
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Call Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <div class="modal-avatar">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="modal-name" id="videoModalName">Hamdi ranim</div>
+      <div class="modal-status">
+        <i class="fas fa-video"></i>
+        Video Calling<span class="animated-dots"><span>.</span><span>.</span><span>.</span></span>
+      </div>
+      <div class="modal-buttons">
+        <button class="modal-btn answer-btn">
+          <i class="fas fa-phone"></i>
+          Answer
+        </button>
+        <button class="modal-btn decline-btn">
+          <i class="fas fa-phone-slash"></i>
+          Decline
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Modal -->
+  <div class="modal" id="profileModal">
+    <div class="modal-content profile-modal-content">
+      <button class="close-btn" aria-label="Close profile">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-avatar">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="modal-name" id="profileName">Hamdi ranim</div>
+      <div class="profile-handle" id="profileHandle">@Hamdi_ranim</div>
+    </div>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+
+  <script src="boit.js"></script>
+</body>
+</html>
