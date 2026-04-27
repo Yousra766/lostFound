@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-left">
+        <div class="user-avatar" id="userAvatar">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="user-info">
+            <h1 id="userName">User Name</h1>
+            <p id="userEmail">username@gmail.com</p>
+            <p id="userPhone">07749286489</p>
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="conversation-btn" onclick="window.location.href='boit.html'">
+          <i class="fas fa-message"></i>
+         Conversation
+        </button>
+        <button class="edit-account-btn" id="editAccountBtn">
+            <i class="fas fa-pen"></i>
+            Edit the account
+        </button>
+    </div>
+</header>
+
+<!-- Main Container -->
+<div class="container">
+    <div class="posts-grid" id="postsGrid">
+        
+    </div>
+</div>
+
+<!-- Edit/Add Post Modal -->
+<div class="modal" id="postModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="postModalTitle">Add New Post</h2>
+            <button class="close-btn" id="closePostModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Lost or Found?</label>
+                <div class="toggle-group">
+                    <div class="toggle-item">
+                        <input type="radio" id="typeLost" name="type" value="lost" checked>
+                        <label for="typeLost">Lost</label>
+                    </div>
+                    <div class="toggle-item">
+                        <input type="radio" id="typeFound" name="type" value="found">
+                        <label for="typeFound">Found</label>
+                    </div>
+                    <div class="toggle-item">
+    <input type="radio" id="typeRecovered" name="type" value="recovered">
+    <label for="typeRecovered">Recovered</label>
+</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Image</label>
+                <div class="image-upload">
+                    <div class="image-preview" id="imagePreview">
+                        <i class="fas fa-image" style="font-size: 32px; color: #bdc3c7;"></i>
+                    </div>
+                    <div class="upload-btn" id="uploadTrigger">
+                        <i class="fas fa-cloud-arrow-up"></i>
+                        <p style="margin-top: 4px; font-size: 12px; color: #7f8c8d;">Click to upload image</p>
+                        <input type="file" id="imageInput" accept="image/*">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="postTitle">Title</label>
+                <input type="text" id="postTitle" placeholder="Enter item title">
+            </div>
+
+            <div class="form-group">
+                <label for="postDescription">Description</label>
+                <textarea id="postDescription" placeholder="Describe the item..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="postDate">Date</label>
+                <input type="date" id="postDate">
+            </div>
+
+            <div class="form-group">
+                <label for="postLocation">Location</label>
+                <input type="text" id="postLocation" placeholder="Where was it lost/found?">
+            </div>
+
+            <div class="form-group">
+                <label for="postCategory">Category</label>
+                <select id="postCategory">
+                    <option value="Electronics">Electronics</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Documents">Documents</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" id="cancelPostBtn">Cancel</button>
+            <button class="btn btn-primary" id="savePostBtn">Save Post</button>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Account Modal -->
+<div class="modal" id="accountModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Edit Account</h2>
+            <button class="close-btn" id="closeAccountModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="profile-image-upload">
+                <div class="profile-avatar" id="profileAvatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="camera-overlay" id="cameraBtn">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <input type="file" id="profileImageInput" class="profile-input-file" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="editName">Name</label>
+                <input type="text" id="editName" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="editEmail">Email</label>
+                <input type="email" id="editEmail" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="editPhone">Phone</label>
+                <input type="tel" id="editPhone" placeholder="Enter your phone">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" id="cancelAccountBtn">Cancel</button>
+            <button class="btn btn-primary" id="saveAccountBtn">Save Changes</button>
+        </div>
+    </div>
+</div>
+
+<script src="profile.js"></script>
+
+</body>
+</html>

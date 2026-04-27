@@ -1,0 +1,1 @@
+UPDATE posts SET published = 1 WHERE id = ?
