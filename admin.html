@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - LostAndFound</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- ── Admin Header ── -->
+    <header class="admin-header">
+        <div class="admin-header-inner">
+
+            <div class="admin-identity">
+                <div class="user-avatar" id="userAvatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="admin-info">
+                    <h1 id="userName">Administration</h1>
+                    <p id="userEmail">Admin@gmail.com</p>
+                    <p id="userPhone">0557532579</p>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <button class="btn-edit-account" id="editAccountBtn">
+                    <i class="fas fa-pen"></i> Edit the account
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ── Posts Grid (3 per row like lost.html) ── -->
+    <main class="admin-posts-section">
+        <div class="container">
+            <div class="row g-4" id="adminPostsContainer">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- ══════════════════════════════
+         Edit Account Modal
+    ══════════════════════════════ -->
+    <div class="modal" id="accountModal">
+        <div class="modal-content">
+            <div class="modal-header-custom">
+                <h2>Edit Account</h2>
+                <button class="close-btn" id="closeAccountModal">&times;</button>
+            </div>
+            <div class="modal-body-custom">
+
+                <!-- Avatar upload -->
+                <div class="profile-image-upload">
+                    <div class="profile-avatar-modal" id="profileAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="camera-overlay" id="cameraBtn">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <input type="file" id="profileImageInput" class="profile-input-file" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="editName">Name</label>
+                    <input type="text" id="editName" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="editEmail">Email</label>
+                    <input type="email" id="editEmail" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="editPhone">Phone</label>
+                    <input type="tel" id="editPhone" placeholder="Enter your phone number">
+                </div>
+            </div>
+            <div class="modal-footer-custom">
+                <button class="btn-modal-cancel" id="cancelAccountBtn">Cancel</button>
+                <button class="btn-modal-save" id="saveAccountBtn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
