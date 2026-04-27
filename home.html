@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lost & Found</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.css"/>
+</head>
+<body>
+<div class="spbar" id="sp"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="assets/logo.png" alt="Logo" class="me-2" style="height:40px;">
+            <span class="fw-bold">LOSTANDFOUND</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="found.html">Found</a></li>
+                <li class="nav-item"><a class="nav-link" href="lost.html">Lost</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+            </ul>
+           <div class="d-flex gap-2">
+    <a href="login.html" class="btn btn-light px-4">Login</a>
+    
+    <a href="signup.html" class="btn btn-light px-4">Signup</a>
+</div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow"><span class="edot"></span>Because every item matters</div>
+    <h1>Lost item?<span class="green">Found item!</span></h1>
+    <p class="hero-sub">Online forms are available to report a lost item or a found item.</p>
+    <div class="hero-btns">
+      <button class="btn-found">
+       <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.59375 8.125L5.1875 4.5625C4.1875 3.53125 4.25 1.8125 5.375 0.84375C6.3125 0 7.75 0.15625 8.625 1.09375L9 1.4375L9.34375 1.09375C10.2188 0.15625 11.6562 0 12.625 0.84375C13.7188 1.8125 13.7812 3.53125 12.7812 4.5625L9.375 8.125C9.15625 8.34375 8.8125 8.34375 8.59375 8.125ZM17.6562 10.5625C18.125 10.9688 18.0938 11.6875 17.625 12.0625L12.875 15.8438C12.5312 16.1562 12.0938 16.2812 11.625 16.2812H0.5C0.21875 16.2812 0 16.0625 0 15.7812V12.7812C0 12.5312 0.21875 12.2812 0.5 12.2812H2.21875L3.65625 11.125C4.3125 10.5938 5.15625 10.2812 6 10.2812H11C11.5938 10.2812 12.0625 10.8438 11.9688 11.4688C11.9062 11.9688 11.4375 12.2812 10.9375 12.2812H8.5C8.21875 12.2812 8 12.5312 8 12.7812C8 13.0625 8.21875 13.2812 8.5 13.2812H12.1875C12.625 13.2812 13.0938 13.1562 13.4375 12.8438L16.3125 10.5625C16.7188 10.25 17.2812 10.2188 17.6562 10.5625Z" fill="white"/>
+</svg>
+
+        REPORT A FOUND ITEM.
+      </button>
+      <button class="btn-lost">
+        <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="30" height="26" rx="13" fill="url(#pattern0_1_1269)"/>
+<defs>
+<pattern id="pattern0_1_1269" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_1269" transform="scale(0.015625)"/>
+</pattern>
+<image id="image0_1_1269" width="64" height="64" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAP1BMVEVHcEwCPqIEPKEEPKICPqECPqECPqMAOqICPqEDPaECPKEAPqICPKECPqECPqEAPaQDPKECPqECPKECPKECPqGazf35AAAAFHRSTlMArzYt6vnxCtFEwB/fcp8TkFdggAcJYTEAAAKESURBVFjDzVfZtqsgDBWRQUTA4f+/9TJ0IBDQnt6H+tIlTXbmsB2GH36EteKvuuNKJDv9M0lyzJ/CjGY6wcPM+IH6LE/kkdtNdapeZqUiRsmXM4re0T9Ykib7S3zZTTpkx2UuhIqierXF+Z7CUravv0QxvmKGdh0zsXT1owxpWBEmVrWTCBHtH22BPcSn2z7E9K/dAgcE2fp3LfWXg2ipDloiuEb9C//to3Y+KZnTWziYmwGQDC9r5inTcCENWJXmUL+3qSXpc55+3pMgQqX2hgMrfGWOhkQEDCmAJY1nYLJAio1ZMAV2nQUDhYjXX3M0BfNIKgAfGcs60LvNwZ+naL6+IshQLXwN7lFQCLYhTZSldoHt4hiIekaaiUAb/j0fmvBv1kwi7JoCwI8Rg4OZBSlCRgSU5gXA1JmR4fDopPQXZtHCQiFDNpY1h0O9oKXNVjQpXYKIbQBB4khK6LArUp7yioZgTmzJ1SEMDE/iGM1XsxfcslUZOQLg8P1TFR116jF4rN7RgtU1W/Et4U1NeGAO2UfkLoBDrIVuZQILAVk+GovXoDGMWs/o9iToqbx3/6tmvpBju6CmJmSvb9j5xuqrTrbuv0CpzHUSD3yrh4SxOogaIF6OW3vu2VxUYYIHM28P/uN673KxOfKfJs2xoUNYByHa75lIN7ITfQLHO5yTRpKkN3y3PflCDyHRNISVzmm36W26QEhUzPeUexNsMR86nRoxUH6BkDFlSYw7DHm5nkKjVz48KWXkthnZnp70c7z0wc+AKrm62gUs1gXCYHejHjSLS7PB3rnjw2OY6Uhtq2H4J98g1eT9AALlX/vwfxD08C2C+ApB9z5P7n0b/8Yn+j9wijn3lAwh1wAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+
+        REPORT A LOST ITEM.
+      </button>
+    </div>
+  </div>
+ <div class="hero-right">
+    <div class="hero-diag"></div>
+    <div class="hero-grid" id="hg">
+        <img src="assets/your-icons-file.png" alt="Lost Items Icons" class="hero-icons-img">
+    </div>
+</div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="reveal">
+    <p class="how-tag">HOW DOES LOST &amp; FOUND HELP YOU?</p>
+  
+  </div>
+  <div class="how-steps">
+    <div class="step reveal" data-delay="100">
+      <div class="step-icon-wrap">
+        <svg width="26" height="34" viewBox="0 0 26 34" fill="none"><path d="M22.3125 4.25C24.0391 4.25 25.5 5.71094 25.5 7.4375V30.8125C25.5 32.6055 24.0391 34 22.3125 34H3.1875C1.39453 34 0 32.6055 0 30.8125V7.4375C0 5.71094 1.39453 4.25 3.1875 4.25H8.5C8.5 1.92578 10.3594 0 12.75 0C15.0742 0 17 1.92578 17 4.25H22.3125ZM6.375 28.1562C7.23828 28.1562 7.96875 27.4922 7.96875 26.5625C7.96875 25.6992 7.23828 24.9688 6.375 24.9688C5.44531 24.9688 4.78125 25.6992 4.78125 26.5625C4.78125 27.4922 5.44531 28.1562 6.375 28.1562ZM6.375 21.7812C7.23828 21.7812 7.96875 21.1172 7.96875 20.1875C7.96875 19.3242 7.23828 18.5938 6.375 18.5938C5.44531 18.5938 4.78125 19.3242 4.78125 20.1875C4.78125 21.1172 5.44531 21.7812 6.375 21.7812ZM6.375 15.4062C7.23828 15.4062 7.96875 14.7422 7.96875 13.8125C7.96875 12.9492 7.23828 12.2188 6.375 12.2188C5.44531 12.2188 4.78125 12.9492 4.78125 13.8125C4.78125 14.7422 5.44531 15.4062 6.375 15.4062ZM12.75 2.65625C11.8203 2.65625 11.1562 3.38672 11.1562 4.25C11.1562 5.17969 11.8203 5.84375 12.75 5.84375C13.6133 5.84375 14.3438 5.17969 14.3438 4.25C14.3438 3.38672 13.6133 2.65625 12.75 2.65625ZM21.25 27.0938V26.0312C21.25 25.7656 20.9844 25.5 20.7188 25.5H11.1562C10.8242 25.5 10.625 25.7656 10.625 26.0312V27.0938C10.625 27.4258 10.8242 27.625 11.1562 27.625H20.7188C20.9844 27.625 21.25 27.4258 21.25 27.0938ZM21.25 20.7188V19.6562C21.25 19.3906 20.9844 19.125 20.7188 19.125H11.1562C10.8242 19.125 10.625 19.3906 10.625 19.6562V20.7188C10.625 21.0508 10.8242 21.25 11.1562 21.25H20.7188C20.9844 21.25 21.25 21.0508 21.25 20.7188ZM21.25 14.3438V13.2812C21.25 13.0156 20.9844 12.75 20.7188 12.75H11.1562C10.8242 12.75 10.625 13.0156 10.625 13.2812V14.3438C10.625 14.6758 10.8242 14.875 11.1562 14.875H20.7188C20.9844 14.875 21.25 14.6758 21.25 14.3438Z" fill="#2E4156"/></svg>
+      </div>
+      <h3>Declare a lost item or a found item</h3>
+      <p>Fill out the report form by providing as many details as possible about the source of the loss, the type of item and its description alerts the cognitive identity quickly.</p>
+    </div>
+    <div class="step-conn"><span class="dc"></span><span class="dc"></span><span class="dc"></span><span class="dc"></span><span class="dc"></span><span class="dc"></span><span class="dc"></span></div>
+    <div class="step reveal" data-delay="200">
+      <div class="step-icon-wrap">
+        <svg width="43" height="35" viewBox="0 0 43 35" fill="none"><path d="M41.3047 18.0625C42.0352 18.3281 42.5 18.9922 42.5 19.6562C42.5 27.957 37.0547 32.5391 33.668 33.8672C33.3359 34 32.8047 34.1328 32.1406 33.8672C27.8906 32.207 23.375 27.0938 23.375 19.6562C23.375 18.9922 23.8398 18.3281 24.5039 18.0625L32.1406 15.0742C32.8047 14.8086 33.4023 14.9414 33.668 15.0742L41.3047 18.0625ZM32.9375 30.7461C35.1953 29.6172 38.8477 26.4297 39.2461 20.6523L32.9375 18.1953V30.7461ZM14.875 17C10.1602 17 6.375 13.2148 6.375 8.5C6.375 3.85156 10.1602 0 14.875 0C19.5234 0 23.375 3.85156 23.375 8.5C23.375 13.2148 19.5234 17 14.875 17ZM21.25 19.6562C21.25 26.0312 24.2383 30.9453 27.8242 33.7344C27.4258 33.9336 26.9609 34 26.5625 34H3.1875C1.39453 34 0 32.6055 0 30.8125V28.0898C0 23.1758 3.98438 19.125 8.89844 19.125H10.0273C11.4883 19.8555 13.1484 20.1875 14.875 20.1875C16.6016 20.1875 18.1953 19.8555 19.6562 19.125H20.7852C20.9844 19.125 21.1172 19.1914 21.3164 19.1914C21.25 19.3906 21.25 19.5234 21.25 19.6562Z" fill="#2E4156"/></svg>
+      </div>
+      <h3>Prove ownership of your item.</h3>
+      <p>Once the item is "matched," prove your identity through a conversation with the partner (e.g., describe your item). This way, our partner can confidently verify that it belongs to you.</p>
+    </div>
+    <div class="step-conn"><span class="dc"></span><span class="dc"></span><span class="dc"></span><span class="dc"></span><span class="dc"></span><span class="dc"></span><span class="dc"></span></div>
+    <div class="step reveal" data-delay="300">
+      <div class="step-icon-wrap">
+        <svg width="43" height="27" viewBox="0 0 43 27" fill="none"><path d="M28.8203 0C29.418 0 29.9492 0.265625 30.3477 0.664062L33.9336 4.25V17.1328C33.8008 16.9336 33.6016 16.8008 33.4688 16.6016L23.7734 8.76562L25.5 7.17188C25.9648 6.77344 25.9648 6.10938 25.5664 5.71094C25.168 5.24609 24.5039 5.24609 24.0391 5.64453L18.793 10.4922C18.7266 10.4922 18.7266 10.4922 18.7266 10.4922C17.5977 11.4883 15.8711 11.2227 15.0078 10.293C14.0781 9.29688 14.0781 7.63672 15.1406 6.57422L21.7148 0.597656C22.1133 0.199219 22.5781 0 23.1094 0H28.8203ZM36.125 4.31641H42.5V21.3164H38.25C37.0547 21.3164 36.125 20.3203 36.125 19.1914V4.31641ZM39.3125 19.1914C39.8438 19.1914 40.375 18.6602 40.375 18.1289C40.375 17.5312 39.8438 17.0664 39.3125 17.0664C38.7148 17.0664 38.25 17.5312 38.25 18.1289C38.25 18.6602 38.7148 19.1914 39.3125 19.1914ZM0 21.25V4.31641H6.375V19.125C6.375 20.3203 5.37891 21.25 4.25 21.25H0ZM3.1875 17.0664C2.58984 17.0664 2.125 17.5312 2.125 18.1289C2.125 18.6602 2.58984 19.1914 3.1875 19.1914C3.71875 19.1914 4.25 18.6602 4.25 18.1289C4.25 17.5312 3.71875 17.0664 3.1875 17.0664ZM32.0742 18.2617C33.0039 18.9922 33.1367 20.3203 32.4062 21.25L31.8086 22.0469C31.0117 22.9766 29.6836 23.1094 28.8203 22.3789L28.4219 22.0469L26.3633 24.6367C25.5 25.6992 23.9062 25.832 22.8438 24.9688L21.7148 23.9727H21.6484C20.1875 25.7656 17.5312 26.0977 15.6719 24.5703L9.69531 19.125H8.5V4.25L12.0859 0.664062C12.4844 0.265625 13.0156 0 13.6133 0H19.1914L13.7461 4.98047C11.8203 6.77344 11.6875 9.82812 13.4141 11.7539C15.207 13.6797 18.1953 13.8789 20.1875 12.0195L22.1797 10.2266L32.0742 18.2617Z" fill="#2E4156"/></svg>
+      </div>
+      <h3>Retrieve it!</h3>
+      <p>Once you are authenticated, you will receive the information to link him and have a rendez-vous.</p>
+    </div>
+  </div>
+  <div class="tip-box reveal">
+    <svg class="tip-lamp" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#tp1)"><g clip-path="url(#tp2)"><path d="M49.1667 61.1667C50.1667 57.8334 52.1667 54.8334 54.8334 52.5C59.8334 48.3333 63 42 63 35C63 22 52.1669 11.3333 38.8334 12C27 12.5 17.3333 22.5 17 34.3333C16.8333 41.6667 20 48.1667 25.1667 52.5C28 54.8333 30 57.8333 31 61.1667H49.1667Z" fill="#FFD15C"/><path d="M37.8333 61.5H39.3333L32.6666 36.6667C32.8333 36.6667 33 36.6667 33.1666 36.6667C34 36.6667 34.8333 36.3334 35.5 35.6667C35.8331 35.3334 36.1666 35.1667 36.6666 35.1667C37.1666 35.1667 37.5 35.3334 37.8333 35.6667C39 37 41 37 42.1666 35.6667C42.5 35.3334 42.8333 35.1667 43.3333 35.1667C43.6666 35.1667 44.1666 35.3334 44.5 35.6667C45.1667 36.3334 45.8333 36.6667 46.8333 36.6667C47 36.6667 47.1666 36.6667 47.3333 36.6667L40.8333 61.5H42.3333L49.1666 35.5C49.1666 35.1667 49.1666 34.8333 48.8333 34.6667C48.5 34.5 48.1666 34.6667 48 34.8334C47.6667 35.1667 47.3333 35.3334 47 35.3334C46.5 35.3334 46.1667 35.1667 45.6667 34.8334C45 34.1667 44.3334 33.8334 43.5 33.8334C42.6666 33.8334 42 34.1667 41.3333 34.8334C40.6666 35.5001 39.6666 35.5001 39 34.8334C38.5 34.1667 37.6667 33.8334 36.8333 33.8334C36 33.8334 35.1666 34.1667 34.6666 34.8334C34.3333 35.1667 33.8333 35.3334 33.3333 35.3334C33 35.3334 32.5 35.1667 32.3333 34.8334C32.1666 34.6667 31.8333 34.5001 31.5 34.6667C31.1667 34.8334 31 35.1667 31.1667 35.5L37.8333 61.5Z" fill="white"/><path d="M34.8333 76.5C35.6667 78.5 37.6667 80 40 80C42.3333 80 44.3333 78.5 45.1667 76.5H34.8333Z" fill="#344A5E"/><path d="M46.1667 76.6667H34C32.3333 76.6667 31 75.3334 31 73.6667V61H49.1667V73.6667C49.1667 75.3333 47.8333 76.6667 46.1667 76.6667Z" fill="#344A5E"/><path d="M49 67.3333H31C30 67.3333 29.1667 66.5 29.1667 65.5C29.1667 64.5 30 63.6667 31 63.6667H49C50 63.6667 50.8333 64.5 50.8333 65.5C50.8333 66.5 50 67.3333 49 67.3333Z" fill="#CCCCCC"/><path d="M49 73.1667H31C30 73.1667 29.1667 72.3334 29.1667 71.3334C29.1667 70.3334 30 69.5001 31 69.5001H49C50 69.5001 50.8333 70.3334 50.8333 71.3334C50.8333 72.3332 50 73.1667 49 73.1667Z" fill="#CCCCCC"/><path d="M40 0C39.1667 0 38.3333 0.666719 38.3333 1.66672V7.33344C38.3333 8.16672 39 9.00016 40 9.00016C41 9.00016 41.6667 8.33344 41.6667 7.33344V1.66672C41.6667 0.666719 40.8333 0 40 0Z" fill="#FFD15C"/><path d="M17.6667 10.1667C17 9.49995 16 9.49995 15.3334 10.1667C14.6669 10.8334 14.6667 11.8334 15.3334 12.4999L19.3334 16.4999C20.0002 17.1667 21.0002 17.1667 21.6667 16.4999C22.3333 15.8332 22.3334 14.8332 21.6667 14.1667L17.6667 10.1667Z" fill="#FFD15C"/><path d="M12.5 33.1667H6.83328C6 33.1667 5.16656 33.8335 5.16656 34.8335C5.16656 35.6667 5.83328 36.5002 6.83328 36.5002H12.5C13.3333 36.5002 14.1667 35.8335 14.1667 34.8335C14.1667 34 13.3333 33.1667 12.5 33.1667Z" fill="#FFD15C"/><path d="M19.3333 53.1667L15.3333 57.1667C14.6666 57.8334 14.6666 58.8334 15.3333 59.5C16 60.1666 17 60.1667 17.6666 59.5L21.6666 55.5C22.3333 54.8333 22.3333 53.8333 21.6666 53.1667C20.9999 52.5002 20 52.5 19.3333 53.1667Z" fill="#FFD15C"/><path d="M60.6667 53.1667C60 52.4999 59 52.4999 58.3333 53.1667C57.6666 53.8334 57.6666 54.8334 58.3333 55.4999L62.3333 59.4999C63 60.1667 64 60.1667 64.6666 59.4999C65.3331 58.8332 65.3333 57.8332 64.6666 57.1667L60.6667 53.1667Z" fill="#FFD15C"/><path d="M73.1667 33.1667H67.5C66.6667 33.1667 65.8333 33.8335 65.8333 34.8335C65.8333 35.6667 66.5 36.5002 67.5 36.5002H73.1667C74 36.5002 74.8334 35.8335 74.8334 34.8335C74.8332 34 74.1667 33.1667 73.1667 33.1667Z" fill="#FFD15C"/><path d="M62.3333 10.1667L58.3333 14.1667C57.6666 14.8334 57.6666 15.8334 58.3333 16.5C59 17.1667 60 17.1667 60.6666 16.5L64.6666 12.5C65.3333 11.8333 65.3333 10.8333 64.6666 10.1667C63.9999 9.50017 63 9.50001 62.3333 10.1667Z" fill="#FFD15C"/></g></g><defs><clipPath id="tp1"><rect width="80" height="80" fill="white"/></clipPath><clipPath id="tp2"><rect width="80" height="80" fill="white"/></clipPath></defs></svg>
+    <div class="tip-body">
+      <strong>Vous devez le savoir</strong>
+      <p>Si vous ajoutez une photo à votre déclaration, vous augmentez <strong>de plus de 50%</strong> vos chances de retrouver votre objet perdu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GOOD HANDS -->
+<section class="good">
+  <h2 class="reveal">You are in good hands.</h2>
+  <p class="good-sub reveal">We put all our expertise into helping you recover all your items.</p>
+  <div class="badges" id="badges">
+    <div class="badge reveal" data-delay="50"><svg class="bi" viewBox="0 0 48 48" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M25.686 32H22.314l-.344 1.28C21.34 35.603 19.814 37.581 17.728 38.781C15.641 39.981 13.164 40.305 10.84 39.682C8.515 39.059 6.532 37.54 5.325 35.457C4.118 33.375 3.787 30.899 4.402 28.572L7.842 15.736C8.287 14.075 9.194 12.573 10.458 11.407C11.722 10.24 13.291 9.456 14.982 9.145C16.674 8.834 18.419 9.009 20.016 9.65C21.612 10.291 22.993 11.371 24 12.766C25.006 11.371 26.388 10.29 27.984 9.648C29.581 9.007 31.326 8.831 33.018 9.142C34.71 9.453 36.28 10.237 37.544 11.404C38.808 12.571 39.715 14.072 40.16 15.734L43.598 28.572C44.2 30.894 43.859 33.36 42.651 35.433C41.443 37.505 39.465 39.017 37.148 39.637C34.831 40.258 32.362 39.938 30.28 38.747C28.197 37.556 26.67 35.59 26.03 33.278L25.686 32ZM34.912 36.21C37.926 36.21 40.37 33.676 40.37 30.55C40.37 27.424 37.926 24.888 34.912 24.888C31.9 24.888 29.456 27.422 29.456 30.548C29.456 33.674 31.9 36.21 34.912 36.21ZM13.088 36.21C16.1 36.21 18.544 33.676 18.544 30.55C18.544 27.424 16.1 24.888 13.088 24.888C10.076 24.888 7.63 27.422 7.63 30.548C7.63 33.674 10.074 36.21 13.088 36.21Z" fill="white"/></svg>3 years of experience</div>
+    <div class="badge reveal" data-delay="100"><svg class="bi" viewBox="0 0 48 48" fill="none"><path opacity=".5" d="M28.586 33.414C28.222 33.037 28.02 32.532 28.025 32.007C28.029 31.483 28.24 30.981 28.61 30.61C28.981 30.24 29.483 30.029 30.007 30.025C30.532 30.02 31.037 30.222 31.414 30.586L39.414 38.586C39.778 38.963 39.98 39.469 39.975 39.993C39.971 40.517 39.761 41.019 39.39 41.39C39.019 41.761 38.517 41.971 37.993 41.975C37.468 41.98 36.963 41.778 36.586 41.414L28.586 33.414Z" fill="white"/><path d="M22 32C24.652 32 27.196 30.946 29.071 29.071C30.946 27.196 32 24.652 32 22C32 19.348 30.946 16.804 29.071 14.929C27.196 13.054 24.652 12 22 12C19.348 12 16.804 13.054 14.929 14.929C13.054 16.804 12 19.348 12 22C12 24.652 13.054 27.196 14.929 29.071C16.804 30.946 19.348 32 22 32ZM22 36C18.134 36 14.426 34.525 11.7 31.9C8.975 29.274 7.5 25.713 7.5 22C7.5 18.287 8.975 14.726 11.7 12.1C14.426 9.475 18.134 8 22 8C25.713 8 29.274 9.475 31.9 12.1C34.525 14.726 36 18.287 36 22C36 25.713 34.525 29.274 31.9 31.9C29.274 34.525 25.713 36 22 36Z" fill="white"/></svg>Dozens of items recovered.</div>
+    <div class="badge reveal" data-delay="150"><svg class="bi" viewBox="0 0 48 48" fill="none"><path d="M24 30C22.409 30 20.883 29.368 19.757 28.243C18.632 27.117 18 25.591 18 24C18 22.409 18.632 20.883 19.757 19.757C20.883 18.632 22.409 18 24 18C25.591 18 27.117 18.632 28.243 19.757C29.368 20.883 30 22.409 30 24C30 25.591 29.368 27.117 28.243 28.243C27.117 29.368 25.591 30 24 30Z" fill="white"/><path opacity=".4" d="M39 21H42C43.657 21 45 22.343 45 24C45 25.657 43.657 27 42 27H39C37.343 27 36 25.657 36 24C36 22.343 37.343 21 39 21ZM6 21H9C10.657 21 12 22.343 12 24C12 25.657 10.657 27 9 27H6C4.343 27 3 25.657 3 24C3 22.343 4.343 21 6 21ZM24 3C25.657 3 27 4.343 27 6V9C27 10.657 25.657 12 24 12C22.343 12 21 10.657 21 9V6C21 4.343 22.343 3 24 3ZM24 36C25.657 36 27 37.343 27 39V42C27 43.657 25.657 45 24 45C22.343 45 21 43.657 21 42V39C21 37.343 22.343 36 24 36Z" fill="white"/></svg>Easy to use.</div>
+    <div class="badge reveal" data-delay="200"><svg class="bi" viewBox="0 0 48 48" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M44 34V42C44 44.209 42.209 46 40 46H8C5.791 46 4 44.209 4 42V34H12.56L13.646 37.264C14.228 39.005 15.871 40 17.442 40H30.764C32.452 40 33.926 39.01 34.342 37.788L36.236 34H44Z" fill="white"/><path opacity=".4" fill-rule="evenodd" clip-rule="evenodd" d="M5.126 30L11.854 18.04C12.548 16.776 13.886 16 15.34 16H32.66C34.114 16 35.452 16.776 36.146 18.04L42.874 30H36.236C34.548 30 33.074 30.99 32.658 32.212L30.764 36H17.442L16.354 32.736C15.772 30.995 14.129 30 12.558 30H5.126Z" fill="white"/><path d="M29.776 5.66H25.86V1.648C25.86 1.017 25.344.648 24.86.648H22.814C22.178.648 21.814 1.11 21.814 1.648V5.664H17.9C17.162 5.664 16.778 6.24 17.138 7.31L23.074 14.32C23.442 14.762 24.232 14.762 24.6 14.32L30.536 7.31C30.896 6.24 30.512 5.664 29.774 5.664" fill="white"/></svg>Simple connection.</div>
+    <div class="badge reveal" data-delay="250"><svg class="bi" viewBox="0 0 48 48" fill="none"><path d="M34.142 14.686L31.314 11.86L24.24 18.928L27.07 21.758L34.142 14.686ZM38.384 16.1L10.1 44.384C9.34 45.144 8.032 45.144 7.272 44.384L1.616 38.728C0.856 37.968 0.856 36.66 1.616 35.9L29.9 7.616C30.66 6.856 31.968 6.856 32.728 7.616L38.384 13.272C39.144 14.032 39.144 15.34 38.384 16.1Z" fill="white"/></svg>Quick report.</div>
+    <div class="badge reveal" data-delay="300"><svg class="bi" viewBox="0 0 48 48" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M28 14C27.333 20.667 25.333 24.233 22 24.7C22 24.7 25 13 21 7C21 7 20.576 13.428 16.29 21.144C14.28 24.76 12 27.198 12 32C12 38.858 19.022 42.4 24.012 42.4C29.002 42.4 36 40 36 31.6C36 28.147 33.333 22.28 28 14Z" fill="white"/></svg>Archived database.</div>
+    <div class="badge reveal" data-delay="350"><svg class="bi" viewBox="0 0 48 48" fill="none"><path opacity=".4" d="M36 28C32.686 28 30 25.314 30 22C30 18.686 32.686 16 36 16C39.314 16 42 18.686 42 22C42 25.314 39.314 28 36 28ZM18 22C14.686 22 12 19.314 12 16C12 12.686 14.686 10 18 10C21.314 10 24 12.686 24 16C24 19.314 21.314 22 18 22Z" fill="white"/><path d="M35.202 30C42.016 30.076 47.578 33.52 47.996 40.8C48.014 41.094 47.996 42 46.912 42H39.2C39.2 37.5 37.712 33.344 35.202 30ZM0.002 40.4C0.776 30.852 8.52 26 17.966 26C27.542 26 35.41 30.586 35.996 40.4C36.02 40.79 35.996 42 34.494 42H1.454C0.954 42 -0.04 40.92 0.002 40.4Z" fill="white"/></svg>Skilled team.</div>
+    <div class="badge reveal" data-delay="400"><svg class="bi" viewBox="0 0 48 48" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.748 39.878L44.446 22.332C44.821 21.766 44.77 21.004 44.32 20.492C43.87 19.98 43.094 19.834 42.486 20.108L34 24V9C34 8.052 33.244 7.296 32.296 7.296C31.64 7.296 31.044 7.682 30.78 8.282L19.082 25.828C18.707 26.394 18.758 27.156 19.208 27.668C19.658 28.18 20.434 28.326 21.042 28.052L30 24.128V39.046C30 40.048 30.848 40.86 31.85 40.766C32.354 40.72 32.8 40.408 32.748 39.878Z" fill="white"/><path opacity=".4" fill-rule="evenodd" clip-rule="evenodd" d="M9 10H19C20.657 10 22 11.343 22 13C22 14.657 20.657 16 19 16H9C7.343 16 6 14.657 6 13C6 11.343 7.343 10 9 10ZM9 34H19C20.657 34 22 35.343 22 37C22 38.657 20.657 40 19 40H9C7.343 40 6 38.657 6 37C6 35.343 7.343 34 9 34ZM5 22H13C14.657 22 16 23.343 16 25C16 26.657 14.657 28 13 28H5C3.343 28 2 26.657 2 25C2 23.343 3.343 22 5 22Z" fill="white"/></svg>Advanced algorithm.</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat reveal"><div class="stat-big">+ 100</div><div class="stat-sub" style="margin-top:8px">Lost items each year at the university</div></div>
+  <div class="stat reveal" data-delay="150"><div class="stat-big" style="font-size:24px;padding-top:6px">Les + perdus</div><div class="stat-sub" style="margin-top:10px">Student ID cards, wallets, keys, phones, and passes.</div></div>
+  <div class="stat reveal" data-delay="300"><div class="stat-big" style="font-size:24px;padding-top:6px">Les + retrouvés</div><div class="stat-sub" style="margin-top:10px">Eyeglasses, ID card, keys.</div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-inner">
+    <div class="about-head reveal">
+    <img src="assets/logo.png" alt="About Icon" class="about-icon">
+      <h2>About us:</h2>
+    </div>
+    <div class="about-body" id="abody">
+      <p>Our site was designed to simplify your daily life and provide you with an intuitive and enjoyable experience.</p>
+      <p>We provide you with reliable and innovative tools to meet your needs quickly and efficiently.</p>
+      <p>Our passionate team is committed to providing you with high-quality service, always focusing on safety, simplicity, and user satisfaction.</p>
+      <p>Discover all our features now and enjoy a unique experience that makes your tasks easier and faster.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="home.js"></script>
+</body>
+</html>
