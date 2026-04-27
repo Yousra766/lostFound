@@ -178,8 +178,14 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; o
 .about::before { content:''; position:absolute; top:-90px; right:-90px; width:300px; height:300px; border-radius:50%; background:rgba(161,192,199,.18); pointer-events:none; }
 .about::after  { content:''; position:absolute; bottom:-90px; left:-60px; width:260px; height:260px; border-radius:50%; background:rgba(26,45,66,.07); pointer-events:none; }
 .about-inner { max-width:780px; margin:0 auto; position:relative; z-index:2; }
-.about-head { display:flex; align-items:center; gap:12px; margin-bottom:28px; }
-.about-icon { width:66px; height:66px; animation:float 4.2s ease-in-out infinite; flex-shrink:0; }
+.about-head { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; /* Ajoute ceci pour centrer horizontalement */
+    gap: 12px; 
+    margin-bottom: 28px; 
+}
+.about-icon { width:90px; height:90px; animation:float 4.2s ease-in-out infinite; flex-shrink:0; }
 .about-head h2 { font-family:'Sora',sans-serif; font-size:30px; font-weight:800; color:var(--text); }
 .about-body { text-align:center; }
 .about-body p { font-size:13px; line-height:1.8; color:var(--text); margin-bottom:6px; font-weight:600; opacity:0; transform:translateY(14px); transition:opacity .5s,transform .5s; }
