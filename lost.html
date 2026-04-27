@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindMyStuff - Lost and Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lost.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/logo.png" alt="Logo" class="me-2" style="height:40px;">
+                <span class="fw-bold">LOSTANDFOUND</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                   <li class="nav-item"><a class="nav-link active" href="lost.html">Lost</a></li>
+                <li class="nav-item"><a class="nav-link" href="found.html">Found</a></li>
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                </ul>
+               <div class="d-flex gap-2">
+    <a href="login.html" class="btn btn-light px-4">Login</a>
+    
+    <a href="signup.html" class="btn btn-light px-4">Signup</a>
+</div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-shape"></div>
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+    <h1 class="hero-title animate-fade-in">Explore all lost items</h1>
+    <p class="hero-subtitle animate-fade-in-delay">
+        If you have lost something<br>
+        post it here to get help finding it
+    </p>
+
+    <div class="action-buttons animate-fade-in-delay-2 mb-4">
+    <button class="btn btn-lost-report btn-lg">
+        <i class="far fa-question-circle me-2"></i> REPORT A LOST ITEM
+    </button>
+</div>
+
+    <div class="search-box animate-slide-up">
+        <div class="search-input-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="Search for items...">
+        <select id="categorySelect">
+            <option value="">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="accessoires">Accessoires</option>
+            <option value="documents">Documents</option>
+            <option value="other">Other</option>
+        </select>
+            <div class="search-divider"></div>
+            <div class="search-actions">
+    <button type="submit" class="search-circle-btn">
+        <i class="fas fa-search"></i>
+    </button>
+    
+    <i class="fas fa-sliders-h filter-icon"></i>
+</div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="items-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">All LOST Items:</h2>
+                <div class="title-underline">
+                    <div class="underline-long"></div>
+                    <div class="underline-short"></div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="itemsContainer">
+                <!-- Items will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lost.js"></script>
+</body>
+</html>

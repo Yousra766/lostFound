@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+    <div class="background-shape shape-1"></div>
+    <div class="background-shape shape-2"></div>
+
+    <div class="container">
+        <div class="login-card">
+            <h1>login</h1>
+            <p class="subtitle">login to start your journey!</p>
+
+            <form id="loginForm">
+                <!-- Username Field -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Enter your username"
+                        required
+                    >
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <!-- Forgot Password Link -->
+                <div class="forgot-password">
+                    <a href="#forgot">Forgot Password?</a>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">LOGIN</button>
+            </form>
+
+            <!-- Social Login -->
+            <div class="social-login">
+               <span>or continue with</span>
+
+               <div id="g_id_onload"
+                data-client_id="727850868959-on4komivghr47691qnl9m814r2qq1hui.apps.googleusercontent.com"
+                data-callback="handleGoogleLogin">
+                </div>
+
+               <div class="g_id_signin" data-type="standard"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="./login-script.js"></script>
+    
+    
+</body>
+</html>
