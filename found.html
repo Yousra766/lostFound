@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindMyStuff - Lost and Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="found.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/logo.png" alt="Logo" class="me-2" style="height:40px;">
+                <span class="fw-bold">LOSTANDFOUND</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="found.html">Found</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                   
+                    <li class="nav-item"><a class="nav-link" href="lost.html">Lost</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                      
+                </ul>
+                <div class="d-flex gap-2">
+    <a href="login.html" class="btn btn-light px-4">Login</a>
+    
+    <a href="signup.html" class="btn btn-light px-4">Signup</a>
+</div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-shape"></div>
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <h1 class="hero-title animate-fade-in">Explore all found items</h1>
+                    <p class="hero-subtitle animate-fade-in-delay">
+                        If you have found something<br>
+                        post it here to help return it to its rightful owner
+                    </p>
+
+                    <div class="action-buttons animate-fade-in-delay-2 mb-4">
+                        <button class="btn btn-lost-report btn-lg d-inline-flex align-items-center justify-content-center gap-2" onclick="window.location.href='declare.html?status=found';">
+                            <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.59375 8.125L5.1875 4.5625C4.1875 3.53125 4.25 1.8125 5.375 0.84375C6.3125 0 7.75 0.15625 8.625 1.09375L9 1.4375L9.34375 1.09375C10.2188 0.15625 11.6562 0 12.625 0.84375C13.7188 1.8125 13.7812 3.53125 12.7812 4.5625L9.375 8.125C9.15625 8.34375 8.8125 8.34375 8.59375 8.125ZM17.6562 10.5625C18.125 10.9688 18.0938 11.6875 17.625 12.0625L12.875 15.8438C12.5312 16.1562 12.0938 16.2812 11.625 16.2812H0.5C0.21875 16.2812 0 16.0625 0 15.7812V12.7812C0 12.5312 0.21875 12.2812 0.5 12.2812H2.21875L3.65625 11.125C4.3125 10.5938 5.15625 10.2812 6 10.2812H11C11.5938 10.2812 12.0625 10.8438 11.9688 11.4688C11.9062 11.9688 11.4375 12.2812 10.9375 12.2812H8.5C8.21875 12.2812 8 12.5312 8 12.7812C8 13.0625 8.21875 13.2812 8.5 13.2812H12.1875C12.625 13.2812 13.0938 13.1562 13.4375 12.8438L16.3125 10.5625C16.7188 10.25 17.2812 10.2188 17.6562 10.5625Z" fill="white"/>
+                            </svg>
+                            Report a found item
+                        </button>
+                    </div>
+
+                    <div class="search-box animate-slide-up">
+    <div class="search-input-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" class="search-input" placeholder="Search for items...">
+
+        <!-- SELECT AU BON ENDROIT (comme LOST) -->
+        <select id="categorySelect" style="display:none;">
+            <option value="">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="accessoires">Accessoires</option>
+            <option value="documents">Documents</option>
+            <option value="other">Other</option>
+        </select>
+
+        <div class="search-divider"></div>
+
+        <div class="search-actions">
+            <button type="submit" class="search-circle-btn">
+                <i class="fas fa-search"></i>
+            </button>
+            <i class="fas fa-sliders-h filter-icon"></i>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <section class="items-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">All Found Items:</h2>
+                <div class="title-underline">
+                    <div class="underline-long"></div>
+                    <div class="underline-short"></div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="itemsContainer">
+                </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="found.js"></script>
+</body>
+</html>
