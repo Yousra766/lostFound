@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declare an Item</title>
+    <link rel="stylesheet" href="declare-styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Form Title -->
+        <div class="form-header">
+    <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+        <path d="m3.3 7 8.7 5 8.7-5"></path>
+        <path d="M12 22V12"></path>
+    </svg>
+    <h1>Declare an Item</h1>
+</div>
+
+        <!-- Form -->
+        <form id="reportForm" class="report-form">
+            <!-- Item Type -->
+            <div class="form-group">
+                <label for="itemType">Item Type <span class="required">*</span></label>
+                <input 
+                    type="text" 
+                    id="itemType" 
+                    name="itemType" 
+                    placeholder="Exp : sac a dos, téléphone..."
+                    required
+                >
+            </div>
+
+            <!-- Category -->
+            <div class="form-group">
+                <label for="category">Category <span class="required">*</span></label>
+                <select id="category" name="category" required>
+                    <option value="">choose a category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="documents">Documents</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+                <label for="date">Date <span class="required">*</span></label>
+                <div class="date-input-wrapper">
+                    <input 
+                        type="date" 
+                        id="date" 
+                        name="date" 
+                        placeholder="JJ/MM/AAAA"
+                        required
+                    >
+                    <svg class="calendar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="form-group">
+                <label for="location">Location <span class="required">*</span></label>
+                <input 
+                    type="text" 
+                    id="location" 
+                    name="location" 
+                    placeholder="Exp : Amphi 5, Salle N201..."
+                    required
+                >
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Description <span class="required">*</span></label>
+                <textarea 
+                    id="description" 
+                    name="description" 
+                    placeholder="Describe the item"
+                    rows="5"
+                    required
+                ></textarea>
+            </div>
+
+            <!-- Item Photo -->
+            <div class="form-group">
+                <label for="photo">Item Photo </label>
+                <div class="file-input-wrapper">
+                    <input 
+                        type="file" 
+                        id="photo" 
+                        name="photo" 
+                        accept="image/*"
+                        
+                    >
+                    <div class="file-input-label">Click to upload or drag and drop</div>
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="form-actions">
+                <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+                <button type="submit" class="btn-submit">declare Item</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="declare-script.js"></script>
+</body>
+</html>
